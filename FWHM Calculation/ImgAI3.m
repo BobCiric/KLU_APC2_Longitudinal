@@ -15,7 +15,7 @@
 % XX = '/step03_FaceNames/FirstLevel/con_0003.nii';
 % Xroi = dir('/Volumes/cerebro/Studies/KLU_APC2/Public/Analysis/misc/ROIs');
 % ROI = {'rHippocampus_L_37.nii','rHippocampus_R_38.nii','LeftBA46.img','RightBA46.img'};
-% subject = csvread('list.txt');
+% subject = importdata('list.txt',filesep);
 % [activ_deactiv_radius] = ImgAI3(X,XX,Xroi,ROI,subject,true);
 %
 % - Jinghang Li (jil202@pitt.edu) July 3rd, 2020
@@ -24,7 +24,7 @@ function [activ_deactiv_radius] = ImgAI3(X,XX,Xroi,ROI,subject,option)
 % XX = '/step03_FaceNames/FirstLevel/con_0003.nii';
 % Xroi = dir('/Volumes/cerebro/Studies/KLU_APC2/Public/Analysis/misc/ROIs'); %ROI directory
 % ROI = {'rHippocampus_L_37.nii','rHippocampus_R_38.nii','LeftBA46.img','RightBA46.img'}; %ROI names
-% subject = csvread("list.txt");
+% subject = importdata('list.txt',filesep);
 
 %make sure the file directories dimensions are correct for dir
 X = repmat(X,length(subject),1);
