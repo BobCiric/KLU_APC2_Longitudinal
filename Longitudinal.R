@@ -8,4 +8,4 @@ n_occur <- data.frame(table(data$Vault_UID)) #getting the subject ID and the cor
 data_multiple_visit <- data[data$Vault_UID %in% n_occur$Var1[n_occur$Freq > 1],] #getting the data with the multiple fMRI scans
 
 list <- data.frame(data_multiple_visit$Vault_UID,data_multiple_visit$Vault_Scan_ID) #getting the subject and scan ID of the participants that have multiple fMRI scans
-write.table(list, "/Users/jinghangli/Desktop/mydata.txt",sep="/",row.names = FALSE,col.names = FALSE) #exporting the list to txt file
+write.table(list, "list.txt",sep="/",row.names = FALSE,col.names = FALSE) #exporting the list to txt file
