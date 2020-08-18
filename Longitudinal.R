@@ -156,7 +156,9 @@ title(main = "DLPFC Absolute Asymmetry Index trajectory")
 tracefunction(data_multiple_visit$Abs_Hippocampus_AI)
 title(main = "Hippocampus Absolute Asymmetry Index trajectory")
 tracefunction(data_multiple_visit$DLPFC_AI)
+title(main = "DLPFC Asymmetry Index trajectory")
 tracefunction(data_multiple_visit$Hippocampus_AI)
+title(main = "Hippocampus Asymmetry Index trajectory")
 # Cognition
 tracefunction(data_multiple_visit$memory_learning)
 title(main = "Memory learning score trajectory")
@@ -180,7 +182,7 @@ mdl <- lm(data_multiple_visit$Left_Hippocampus_FWHM[which(data_multiple_visit$Pi
 abline(mdl, col='black')
 points(data_multiple_visit$Visit_Relative[data_multiple_visit$PiB_STATUS_CODE == TRUE],
        data_multiple_visit$Left_Hippocampus_FWHM[data_multiple_visit$PiB_STATUS_CODE == TRUE], pch = 19, cex =1, col = "red")
-
+title(main = "Left Hippocampus FWHM trajectory")
 # Right** Hippocampus
 plot(data_multiple_visit$Visit_Relative, data_multiple_visit$Right_Hippocampus_FWHM)
 pib_mdl <- lm(data_multiple_visit$Right_Hippocampus_FWHM[which(data_multiple_visit$PiB_STATUS_CODE == TRUE)] ~ 
@@ -191,7 +193,7 @@ mdl <- lm(data_multiple_visit$Right_Hippocampus_FWHM[which(data_multiple_visit$P
 abline(mdl, col='black')
 points(data_multiple_visit$Visit_Relative[data_multiple_visit$PiB_STATUS_CODE == TRUE],
        data_multiple_visit$Right_Hippocampus_FWHM[data_multiple_visit$PiB_STATUS_CODE == TRUE], pch = 19, cex =1, col = "red")
-
+title(main = "Right Hippocampus FWHM trajectory")
 # Right DLPFC
 plot(data_multiple_visit$Visit_Relative, data_multiple_visit$Right_DLPFC_FWHM)
 pib_mdl <- lm(data_multiple_visit$Right_DLPFC_FWHM[which(data_multiple_visit$PiB_STATUS_CODE == TRUE)] ~ 
@@ -202,7 +204,7 @@ mdl <- lm(data_multiple_visit$Right_DLPFC_FWHM[which(data_multiple_visit$PiB_STA
 abline(mdl, col='black')
 points(data_multiple_visit$Visit_Relative[data_multiple_visit$PiB_STATUS_CODE == TRUE],
        data_multiple_visit$Right_DLPFC_FWHM[data_multiple_visit$PiB_STATUS_CODE == TRUE], pch = 19, cex =1, col = "red")
-
+title(main = "Left DLPFC FWHM trajectory")
 # Left DLPFC
 plot(data_multiple_visit$Visit_Relative, data_multiple_visit$Left_DLPFC_FWHM)
 pib_mdl <- lm(data_multiple_visit$Left_DLPFC_FWHM[which(data_multiple_visit$PiB_STATUS_CODE == TRUE)] ~ 
@@ -213,6 +215,7 @@ mdl <- lm(data_multiple_visit$Left_DLPFC_FWHM[which(data_multiple_visit$PiB_STAT
 abline(mdl, col='black')
 points(data_multiple_visit$Visit_Relative[data_multiple_visit$PiB_STATUS_CODE == TRUE],
        data_multiple_visit$Left_DLPFC_FWHM[data_multiple_visit$PiB_STATUS_CODE == TRUE], pch = 19, cex =1, col = "red")
+title(main = "Right DLPFC FWHM trajectory")
 ##############################################
 
 # Activation ############################
@@ -226,7 +229,7 @@ mdl <- lm(data_multiple_visit$Left_Hippocampus_Activation[which(data_multiple_vi
 abline(mdl, col='black')
 points(data_multiple_visit$Visit_Relative[data_multiple_visit$PiB_STATUS_CODE == TRUE],
        data_multiple_visit$Left_Hippocampus_Activation[data_multiple_visit$PiB_STATUS_CODE == TRUE], pch = 19, cex =1, col = "red")
-
+title(main = "Left Hippocampus Activation trajectory")
 # Right Hippocampus
 plot(data_multiple_visit$Visit_Relative, data_multiple_visit$Right_Hippocampus_Activation)
 pib_mdl <- lm(data_multiple_visit$Right_Hippocampus_Activation[which(data_multiple_visit$PiB_STATUS_CODE == TRUE)] ~ 
@@ -237,7 +240,7 @@ mdl <- lm(data_multiple_visit$Right_Hippocampus_Activation[which(data_multiple_v
 abline(mdl, col='black')
 points(data_multiple_visit$Visit_Relative[data_multiple_visit$PiB_STATUS_CODE == TRUE],
        data_multiple_visit$Right_Hippocampus_Activation[data_multiple_visit$PiB_STATUS_CODE == TRUE], pch = 19, cex =1, col = "red")
-
+title(main = "Right Hippocampus Activation trajectory")
 #** Right DLPFC
 plot(data_multiple_visit$Visit_Relative, data_multiple_visit$Right_DLPFC_Activation)
 pib_mdl <- lm(data_multiple_visit$Right_DLPFC_Activation[which(data_multiple_visit$PiB_STATUS_CODE == TRUE)] ~ 
@@ -250,7 +253,6 @@ points(data_multiple_visit$Visit_Relative[data_multiple_visit$PiB_STATUS_CODE ==
        data_multiple_visit$Right_DLPFC_Activation[data_multiple_visit$PiB_STATUS_CODE == TRUE], pch = 19, cex =1, col = "red")
 title(main = "Right DLPFC Activation Trajectory")
 
-
 # Left DLPFC
 plot(data_multiple_visit$Visit_Relative, data_multiple_visit$Left_DLPFC_Activation)
 pib_mdl <- lm(data_multiple_visit$Left_DLPFC_Activation[which(data_multiple_visit$PiB_STATUS_CODE == TRUE)] ~ 
@@ -261,6 +263,8 @@ mdl <- lm(data_multiple_visit$Left_DLPFC_Activation[which(data_multiple_visit$Pi
 abline(mdl, col='black')
 points(data_multiple_visit$Visit_Relative[data_multiple_visit$PiB_STATUS_CODE == TRUE],
        data_multiple_visit$Left_DLPFC_Activation[data_multiple_visit$PiB_STATUS_CODE == TRUE], pch = 19, cex =1, col = "red")
+title(main = "Left DLPFC Activation Trajectory")
+
 ##############################################
 
 # Cognition ############################
@@ -274,7 +278,7 @@ mdl <- lm(data_multiple_visit$memory_learning[which(data_multiple_visit$PiB_STAT
 abline(mdl, col='black')
 points(data_multiple_visit$Visit_Relative[data_multiple_visit$PiB_STATUS_CODE == TRUE],
        data_multiple_visit$memory_learning[data_multiple_visit$PiB_STATUS_CODE == TRUE], pch = 19, cex =1, col = "red")
-
+title(main = "Memory Learning Domain Trajectory")
 # memory_retrieval
 plot(data_multiple_visit$Visit_Relative, data_multiple_visit$memory_retrieval)
 pib_mdl <- lm(data_multiple_visit$memory_retrieval[which(data_multiple_visit$PiB_STATUS_CODE == TRUE)] ~ 
@@ -285,6 +289,7 @@ mdl <- lm(data_multiple_visit$memory_retrieval[which(data_multiple_visit$PiB_STA
 abline(mdl, col='black')
 points(data_multiple_visit$Visit_Relative[data_multiple_visit$PiB_STATUS_CODE == TRUE],
        data_multiple_visit$memory_retrieval[data_multiple_visit$PiB_STATUS_CODE == TRUE], pch = 19, cex =1, col = "red")
+title(main = "Memory Retrieval Domain Trajectory")
 
 # visuospatial
 plot(data_multiple_visit$Visit_Relative, data_multiple_visit$visuospatial)
@@ -296,6 +301,7 @@ mdl <- lm(data_multiple_visit$visuospatial[which(data_multiple_visit$PiB_STATUS_
 abline(mdl, col='black')
 points(data_multiple_visit$Visit_Relative[data_multiple_visit$PiB_STATUS_CODE == TRUE],
        data_multiple_visit$visuospatial[data_multiple_visit$PiB_STATUS_CODE == TRUE], pch = 19, cex =1, col = "red")
+title(main = "Visuospatial Domain Trajectory")
 
 #** language
 plot(data_multiple_visit$Visit_Relative, data_multiple_visit$language)
@@ -307,7 +313,7 @@ mdl <- lm(data_multiple_visit$language[which(data_multiple_visit$PiB_STATUS_CODE
 abline(mdl, col='black')
 points(data_multiple_visit$Visit_Relative[data_multiple_visit$PiB_STATUS_CODE == TRUE],
        data_multiple_visit$language[data_multiple_visit$PiB_STATUS_CODE == TRUE], pch = 19, cex =1, col = "red")
-title(main = "Language Domain Decline Trajectory")
+title(main = "Language Domain Trajectory")
 
 #** executive_attention
 plot(data_multiple_visit$Visit_Relative, data_multiple_visit$executive_attention)
@@ -319,7 +325,7 @@ mdl <- lm(data_multiple_visit$executive_attention[which(data_multiple_visit$PiB_
 abline(mdl, col='black')
 points(data_multiple_visit$Visit_Relative[data_multiple_visit$PiB_STATUS_CODE == TRUE],
        data_multiple_visit$executive_attention[data_multiple_visit$PiB_STATUS_CODE == TRUE], pch = 19, cex =1, col = "red")
-title(main = "Executive_Attention Domain Decline Trajectory")
+title(main = "Executive_Attention Domain Trajectory")
 
 #** GDS_TOTAL
 plot(data_multiple_visit$Visit_Relative, data_multiple_visit$GDS_TOTAL)
@@ -332,7 +338,6 @@ abline(mdl, col='black')
 points(data_multiple_visit$Visit_Relative[data_multiple_visit$PiB_STATUS_CODE == TRUE],
        data_multiple_visit$GDS_TOTAL[data_multiple_visit$PiB_STATUS_CODE == TRUE], pch = 19, cex =1, col = "red")
 title(main = "GDS_TOTAL Trajectory")
-
 ##############################################
 
 #Abs Hippocampus AI#############################################
@@ -345,6 +350,7 @@ mdl <- lm(data_multiple_visit$Abs_Hippocampus_AI[which(data_multiple_visit$PiB_S
 abline(mdl, col='black')
 points(data_multiple_visit$Visit_Relative[data_multiple_visit$PiB_STATUS_CODE == TRUE],
        data_multiple_visit$Abs_Hippocampus_AI[data_multiple_visit$PiB_STATUS_CODE == TRUE], pch = 19, cex =1, col = "red")
+title(main = "Abs Hippocampus AI Trajectory")
 
 #Abs DLPFC AI#############################################
 plot(data_multiple_visit$Visit_Relative, data_multiple_visit$Abs_DLPFC_AI)
@@ -356,9 +362,8 @@ mdl <- lm(data_multiple_visit$Abs_DLPFC_AI[which(data_multiple_visit$PiB_STATUS_
 abline(mdl, col='black')
 points(data_multiple_visit$Visit_Relative[data_multiple_visit$PiB_STATUS_CODE == TRUE],
        data_multiple_visit$Abs_DLPFC_AI[data_multiple_visit$PiB_STATUS_CODE == TRUE], pch = 19, cex =1, col = "red")
+title(main = "Abs DLPFC AI Trajectory")
 ##############################################
-
-
 #** executive_attention vs Right Hippocampus FWHM
 plot(data_multiple_visit$Right_Hippocampus_FWHM, data_multiple_visit$executive_attention)
 pib_mdl <- lm(data_multiple_visit$executive_attention[which(data_multiple_visit$PiB_STATUS_CODE == TRUE)] ~ 
@@ -454,31 +459,6 @@ abline(mdl, col='black')
 points(data_multiple_visit$Abs_Hippocampus_AI[data_multiple_visit$PiB_STATUS_CODE == TRUE],
        data_multiple_visit$language[data_multiple_visit$PiB_STATUS_CODE == TRUE], pch = 19, cex =1, col = "red")
 title(main = "language vs Hippocampus AI")
-
-
-
-
-
-rate_of_change <- function(val2, val1){
-  rate <- (val2 - val1)/data_multiple_visit$Visit_Relative[las_ind]
-  return(rate)
-}
-#rate of change left hippocampus fwhm
-val2_l_hippo_fwhm <- data_multiple_visit$Left_Hippocampus_FWHM[las_ind]
-val1_l_hippo_fwhm <- data_multiple_visit$Left_Hippocampus_FWHM[pre_ind]
-
-val2_abs_hippo_AI <- data_multiple_visit$Abs_Hippocampus_AI[las_ind]
-val1_abs_hippo_AI <- data_multiple_visit$Abs_Hippocampus_AI[pre_ind]
-
-rate_l_hippocampus_fhwm <- rate_of_change(val2_l_hippo_fwhm,val1_l_hippo_fwhm)
-rate_abs_hippocampus_AI <- rate_of_change(val2_abs_hippo_AI,val1_abs_hippo_AI)
-
-data_multiple_visit$rate_l_hippocampus_fwhm <- NA
-data_multiple_visit$rate_abs_hippocampus_AI <- NA
-data_multiple_visit$rate_l_hippocampus_fwhm[pre_ind] <-rate_l_hippocampus_fhwm
-data_multiple_visit$rate_abs_hippocampus_AI[pre_ind] <-rate_abs_hippocampus_AI
-
-data1 <- data_multiple_visit[which(data_multiple_visit$Visit_Relative == 1),]
 #Regression FWHM#######################################################################
 mdl_left_hippocampus_FWHM <- lm(Left_Hippocampus_FWHM ~ GDS_TOTAL+Visit_Relative + Age_CurrentVisit+Sex_cat+Race_cat+Education_cat+FDG_SUVR_GTM_FS_Global+PiB_STATUS_CODE+APOE_STATUS_CODE
                                 +Visit_Relative*FDG_SUVR_GTM_FS_Global+Visit_Relative*PiB_STATUS_CODE+Visit_Relative*APOE_STATUS_CODE, data = data_multiple_visit)
@@ -541,7 +521,25 @@ summary(mdl_language)
 mdl_executive_attention<- lm(executive_attention ~ Abs_Hippocampus_AI+Abs_DLPFC_AI+GDS_TOTAL+ Visit_Relative + Age_CurrentVisit+Sex_cat+Race_cat+Education_cat+FDG_SUVR_GTM_FS_Global+PiB_STATUS_CODE+APOE_STATUS_CODE
                    , data = data_multiple_visit)
 summary(mdl_executive_attention)
-
-
+# rate_of_change <- function(val2, val1){
+#   rate <- (val2 - val1)/data_multiple_visit$Visit_Relative[las_ind]
+#   return(rate)
+# }
+# #rate of change left hippocampus fwhm
+# val2_l_hippo_fwhm <- data_multiple_visit$Left_Hippocampus_FWHM[las_ind]
+# val1_l_hippo_fwhm <- data_multiple_visit$Left_Hippocampus_FWHM[pre_ind]
+# 
+# val2_abs_hippo_AI <- data_multiple_visit$Abs_Hippocampus_AI[las_ind]
+# val1_abs_hippo_AI <- data_multiple_visit$Abs_Hippocampus_AI[pre_ind]
+# 
+# rate_l_hippocampus_fhwm <- rate_of_change(val2_l_hippo_fwhm,val1_l_hippo_fwhm)
+# rate_abs_hippocampus_AI <- rate_of_change(val2_abs_hippo_AI,val1_abs_hippo_AI)
+# 
+# data_multiple_visit$rate_l_hippocampus_fwhm <- NA
+# data_multiple_visit$rate_abs_hippocampus_AI <- NA
+# data_multiple_visit$rate_l_hippocampus_fwhm[pre_ind] <-rate_l_hippocampus_fhwm
+# data_multiple_visit$rate_abs_hippocampus_AI[pre_ind] <-rate_abs_hippocampus_AI
+# 
+# data1 <- data_multiple_visit[which(data_multiple_visit$Visit_Relative == 1),]
 # list <- data.frame(data_multiple_visit$Vault_UID,data_multiple_visit$Vault_Scan_ID) #getting the subject and scan ID of the participants that have multiple fMRI scans
 # write.table(list, "list.txt",sep="/",row.names = FALSE,col.names = FALSE) #exporting the list to txt file
